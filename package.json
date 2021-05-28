@@ -6,8 +6,23 @@
     "test": "standard && jest",
     "test:e2e": "cypress open",
     "lint": "standard",
-    "lint:fix": "standard --fix"
-  },
+    "lint:fix": "standard --fix",
+    "test": "jest --coverage",
+    "test:make-badges": "npm run test && jest-badge-generator"
+    },
+  "jest": {
+      "coverageReporters": [
+          "json",
+          "json-summary",
+          "lcov",
+          "text",
+          "text-summary"
+      ],
+      "testPathIgnorePatterns": [
+          "/node_modules/"
+      ],
+      "testRegex": "(/__tests__/.*|\\.(test|spec))\\.jsx?$"
+    },
   "dependencies": {
     "@fortawesome/fontawesome-free": "^5.15.3",
     "@rails/actioncable": "^6.1.3",
