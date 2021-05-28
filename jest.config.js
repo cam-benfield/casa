@@ -192,4 +192,21 @@ module.exports = {
 
   // Whether to use watchman for file crawling
   // watchman: true,
+  "scripts": {
+    "test": "jest --coverage",
+    "test:make-badges": "npm run test && jest-badge-generator" // you have the options argument to convert for png with `jest-badge-generator --type "png"` this will convert output svg to png
+  },
+  "jest": {
+    "coverageReporters": [
+        "json",
+        "json-summary",
+        "lcov",
+        "text",
+        "text-summary"
+    ],
+    "testPathIgnorePatterns": [
+        "/node_modules/"
+    ],
+    "testRegex": "(/__tests__/.*|\\.(test|spec))\\.jsx?$"
+  },
 }
