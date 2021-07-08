@@ -14,7 +14,7 @@ gem "devise_invitable"
 gem "draper" # adds decorators for cleaner presentation logic
 gem "faker" # creates realistic seed data, valuable for staging and demos
 gem "jbuilder", "~> 2.11" # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
-gem "noticed" # Notifications
+gem "noticed" , ">= 1.4.1" # Notifications
 gem "paper_trail" # tracking changes
 gem "pg", ">= 0.18", "< 2.0" # Use postgresql as the database for Active Record
 gem "puma", "~> 5.3" # Use Puma as the app server
@@ -46,7 +46,7 @@ end
 
 group :development do
   gem "annotate" # for adding db field listings to models as comments
-  gem "letter_opener" # Opens emails in new tab for easier testing
+  gem "letter_opener" , ">= 1.7.0" # Opens emails in new tab for easier testing
   gem "listen", ">= 3.0.5", "< 3.6"
   gem "spring" # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem "spring-commands-rspec"
@@ -56,8 +56,8 @@ end
 
 group :test do
   gem "brakeman" # security inspection
-  gem "capybara", ">= 2.15"
-  gem "capybara-screenshot"
+  gem "capybara", ">= 3.35.3"
+  gem "capybara-screenshot", ">= 1.0.25"
   gem "database_cleaner-active_record", "~> 2.0.1"
   gem "rake"
   gem "rails-controller-testing"
