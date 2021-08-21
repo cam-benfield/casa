@@ -4,7 +4,7 @@ source "https://rubygems.org"
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 ruby "3.0.1"
-gem "rails", "~> 6.1.3"
+gem "rails", "~> 6.1.4", ">= 6.1.4.1"
 
 gem "after_party" # post-deployment tasks
 gem "amazing_print" # easier console reading
@@ -14,7 +14,7 @@ gem "devise_invitable"
 gem "draper" # adds decorators for cleaner presentation logic
 gem "faker" # creates realistic seed data, valuable for staging and demos
 gem "jbuilder", "~> 2.11" # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
-gem "noticed" # Notifications
+gem "noticed" , ">= 1.4.1" # Notifications
 gem "paper_trail" # tracking changes
 gem "pg", ">= 0.18", "< 2.0" # Use postgresql as the database for Active Record
 gem "puma", "~> 5.3" # Use Puma as the app server
