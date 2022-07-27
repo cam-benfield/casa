@@ -4,7 +4,7 @@ source "https://rubygems.org"
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 ruby "3.0.1"
-gem "rails", "~> 6.1.3"
+gem "rails", "~> 6.1.6", ">= 6.1.6.1"
 
 gem "after_party" # post-deployment tasks
 gem "amazing_print" # easier console reading
@@ -28,7 +28,7 @@ gem "lograge" # log less so heroku papertrail quits rate limiting our logs
 gem "bootsnap", ">= 1.4.2", require: false # Reduces boot times through caching; required in config/boot.rb
 gem "bugsnag" # tracking errors in prod
 gem "sablon" # Word document templating tool for Case Court Reports
-gem "paranoia", "~> 2.2" # For soft-deleting purpose
+gem "paranoia", "~> 2.4", ">= 2.4.3" # For soft-deleting purpose
 gem "request_store"
 
 group :development, :test do
