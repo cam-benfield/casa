@@ -4,7 +4,7 @@ source "https://rubygems.org"
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 ruby "3.0.1"
-gem "rails", "~> 6.1.3"
+gem "rails", "~> 6.1.7", ">= 6.1.7.1"
 
 gem "after_party" # post-deployment tasks
 gem "amazing_print" # easier console reading
@@ -13,7 +13,7 @@ gem "devise" # for authentication
 gem "devise_invitable"
 gem "draper" # adds decorators for cleaner presentation logic
 gem "faker" # creates realistic seed data, valuable for staging and demos
-gem "jbuilder", "~> 2.11" # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
+gem "jbuilder", "~> 2.11", ">= 2.11.2" # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem "noticed" # Notifications
 gem "paper_trail" # tracking changes
 gem "pg", ">= 0.18", "< 2.0" # Use postgresql as the database for Active Record
@@ -21,14 +21,14 @@ gem "puma", "~> 5.3" # Use Puma as the app server
 gem "pundit" # for authorization management - based on user.role field
 gem "rack-attack" # for blocking & throttling abusive requests
 gem "skylight" # automated performance testing https://www.skylight.io/
-gem "webpacker", "~> 5.4" # Transpile app-like JavaScript. Read more: https://github.com/rails/webpacker
+gem "webpacker", "~> 5.4", ">= 5.4.0" # Transpile app-like JavaScript. Read more: https://github.com/rails/webpacker
 gem "image_processing", "~> 1.12" # Set of higher-level helper methods for image processing.
 gem "lograge" # log less so heroku papertrail quits rate limiting our logs
 
 gem "bootsnap", ">= 1.4.2", require: false # Reduces boot times through caching; required in config/boot.rb
 gem "bugsnag" # tracking errors in prod
 gem "sablon" # Word document templating tool for Case Court Reports
-gem "paranoia", "~> 2.2" # For soft-deleting purpose
+gem "paranoia", "~> 2.4", ">= 2.4.3" # For soft-deleting purpose
 gem "request_store"
 
 group :development, :test do
@@ -41,7 +41,7 @@ group :development, :test do
   gem "rspec-rails", "~> 5.0.1"
   gem "shoulda-matchers"
   gem "standard", "~> 1.1.1" # linter https://github.com/testdouble/standard
-  gem "cypress-on-rails", "~> 1.10"
+  gem "cypress-on-rails", "~> 1.10", ">= 1.10.1"
 end
 
 group :development do
@@ -51,12 +51,12 @@ group :development do
   gem "spring" # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem "spring-commands-rspec"
   gem "spring-watcher-listen", "~> 2.0.0"
-  gem "web-console", ">= 3.3.0" # Access an interactive console on exception pages or by calling 'console' anywhere in the code.
+  gem "web-console", ">= 4.1.0" # Access an interactive console on exception pages or by calling 'console' anywhere in the code.
 end
 
 group :test do
   gem "brakeman" # security inspection
-  gem "capybara", ">= 2.15"
+  gem "capybara", ">= 3.35.3"
   gem "capybara-screenshot"
   gem "database_cleaner-active_record", "~> 2.0.1"
   gem "rake"
