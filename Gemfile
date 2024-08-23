@@ -34,13 +34,13 @@ gem "request_store"
 group :development, :test do
   gem "bullet" # Detect and fix N+1 queries
   gem "byebug", platforms: %i[mri mingw x64_mingw] # Call 'byebug' anywhere in the code to stop execution and get a debugger console
-  gem "erb_lint", require: false
+  gem "erb_lint", ">= 0.1.0", require: false
   gem "factory_bot_rails"
   gem "pry"
   gem "pry-byebug"
   gem "rspec-rails", "~> 5.0.1"
   gem "shoulda-matchers"
-  gem "standard", "~> 1.1.1" # linter https://github.com/testdouble/standard
+  gem "standard", "~> 1.1.2" # linter https://github.com/testdouble/standard
   gem "cypress-on-rails", "~> 1.10"
 end
 
