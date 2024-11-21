@@ -22,7 +22,7 @@ gem "pundit" # for authorization management - based on user.role field
 gem "rack-attack" # for blocking & throttling abusive requests
 gem "skylight" # automated performance testing https://www.skylight.io/
 gem "webpacker", "~> 5.4" # Transpile app-like JavaScript. Read more: https://github.com/rails/webpacker
-gem "image_processing", "~> 1.12" # Set of higher-level helper methods for image processing.
+gem "image_processing", "~> 1.12", ">= 1.12.2" # Set of higher-level helper methods for image processing.
 gem "lograge" # log less so heroku papertrail quits rate limiting our logs
 
 gem "bootsnap", ">= 1.4.2", require: false # Reduces boot times through caching; required in config/boot.rb
