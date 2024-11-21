@@ -8,7 +8,7 @@ gem "rails", "~> 6.1.3"
 
 gem "after_party" # post-deployment tasks
 gem "amazing_print" # easier console reading
-gem "azure-storage-blob", require: false
+gem "azure-storage-blob", ">= 2.0.3", require: false
 gem "devise" # for authentication
 gem "devise_invitable"
 gem "draper" # adds decorators for cleaner presentation logic
