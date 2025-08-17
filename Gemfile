@@ -4,7 +4,7 @@ source "https://rubygems.org"
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 ruby "3.0.1"
-gem "rails", "~> 6.1.3"
+gem "rails", "~> 7.1.5", ">= 7.1.5.2"
 
 gem "after_party" # post-deployment tasks
 gem "amazing_print" # easier console reading
@@ -14,8 +14,8 @@ gem "devise_invitable"
 gem "draper" # adds decorators for cleaner presentation logic
 gem "faker" # creates realistic seed data, valuable for staging and demos
 gem "jbuilder", "~> 2.11" # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
-gem "noticed" # Notifications
-gem "paper_trail" # tracking changes
+gem "noticed" , ">= 1.5.0" # Notifications
+gem "paper_trail" , ">= 12.1.0" # tracking changes
 gem "pg", ">= 0.18", "< 2.0" # Use postgresql as the database for Active Record
 gem "puma", "~> 5.3" # Use Puma as the app server
 gem "pundit" # for authorization management - based on user.role field
@@ -28,7 +28,7 @@ gem "lograge" # log less so heroku papertrail quits rate limiting our logs
 gem "bootsnap", ">= 1.4.2", require: false # Reduces boot times through caching; required in config/boot.rb
 gem "bugsnag" # tracking errors in prod
 gem "sablon" # Word document templating tool for Case Court Reports
-gem "paranoia", "~> 2.2" # For soft-deleting purpose
+gem "paranoia", "~> 2.6", ">= 2.6.3" # For soft-deleting purpose
 gem "request_store"
 
 group :development, :test do
@@ -45,7 +45,7 @@ group :development, :test do
 end
 
 group :development do
-  gem "annotate" # for adding db field listings to models as comments
+  gem "annotate" , ">= 3.2.0" # for adding db field listings to models as comments
   gem "letter_opener" # Opens emails in new tab for easier testing
   gem "listen", ">= 3.0.5", "< 3.6"
   gem "spring" # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
@@ -58,7 +58,7 @@ group :test do
   gem "brakeman" # security inspection
   gem "capybara", ">= 2.15"
   gem "capybara-screenshot"
-  gem "database_cleaner-active_record", "~> 2.0.1"
+  gem "database_cleaner-active_record", "~> 2.1.0"
   gem "rake"
   gem "rails-controller-testing"
   gem "selenium-webdriver"
